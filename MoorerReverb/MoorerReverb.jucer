@@ -11,6 +11,8 @@
       <FILE id="bR6x85" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="Zs0EjH" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="DBavKY" name="FBCF.cpp" compile="1" resource="0" file="Source/FBCF.cpp"/>
+      <FILE id="Q6TAQZ" name="FBCF.h" compile="0" resource="0" file="Source/FBCF.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
