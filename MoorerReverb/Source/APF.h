@@ -15,12 +15,24 @@
 // Class for implimenting colorless reverb using an
 // All pass filter
 class APF{
+    
 public:
     APF();
-    void processAPF();
-    void setAPFParams();
+    
+    APF(float delay, float speed, float fb);
+    
+    float processSample(float x, int c);
+    
+    void setDelaySamples(float delay);
+    void setSpeed(float speed);
+    
     
 private:
+    FractionalDelay frac;
     
+    int Fs = 48000;
+    int sampleStart = 0;
+    float speed = 0.9;
+    float fb = 0.0f;
     
 };
