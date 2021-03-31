@@ -32,7 +32,8 @@ float FractionalDelay::processSample(float x, int channel){
         lfo = depth * sin(currentAngle[channel]);
         
         currentAngle[channel] += angleChange;
-        if (currentAngle[channel] > 2.f * M_PI){
+        if (currentAngle[channel] > 2.f * M_PI){ //o.phase 
+
             currentAngle[channel] -= 2.f * M_PI;
         }
         
