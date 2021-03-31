@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="brj4Tb" name="MoorerReverb" projectType="audioplug" useAppConfig="0"
@@ -15,6 +16,14 @@
       <FILE id="W1NGTu" name="LargeKnob.h" compile="0" resource="0" file="Source/LargeKnob.h"/>
       <FILE id="dF1dEx" name="SmallKnob.cpp" compile="1" resource="0" file="Source/SmallKnob.cpp"/>
       <FILE id="bT0nqa" name="SmallKnob.h" compile="0" resource="0" file="Source/SmallKnob.h"/>
+      <FILE id="yy7pV2" name="APF.cpp" compile="1" resource="0" file="Source/APF.cpp"/>
+      <FILE id="yAXCwI" name="APF.h" compile="0" resource="0" file="Source/APF.h"/>
+      <FILE id="RENQ6T" name="FractionalDelay.cpp" compile="1" resource="0"
+            file="Source/FractionalDelay.cpp"/>
+      <FILE id="OPorhx" name="FractionalDelay.hpp" compile="0" resource="0"
+      <FILE id="DBavKY" name="FBCF.cpp" compile="1" resource="0" file="Source/FBCF.cpp"/>
+      <FILE id="Q6TAQZ" name="FBCF.h" compile="0" resource="0" file="Source/FBCF.h"/>
+            file="Source/FractionalDelay.hpp"/>
     </GROUP>
     <GROUP id="{FB35709A-4F3C-2E8B-FCF4-CC403CD4858B}" name="Resources">
       <FILE id="ExfaXP" name="smallPurpleKnob.png" compile="0" resource="1"
@@ -77,3 +86,4 @@
     <OSX/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>
+
