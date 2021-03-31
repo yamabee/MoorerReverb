@@ -24,6 +24,9 @@
       <FILE id="DBavKY" name="FBCF.cpp" compile="1" resource="0" file="Source/FBCF.cpp"/>
       <FILE id="Q6TAQZ" name="FBCF.h" compile="0" resource="0" file="Source/FBCF.h"/>
             file="Source/FractionalDelay.hpp"/>
+      <FILE id="yhkVBB" name="DelayTapLine.cpp" compile="1" resource="0"
+            file="Source/DelayTapLine.cpp"/>
+      <FILE id="ip8C3G" name="DelayTapLine.h" compile="0" resource="0" file="Source/DelayTapLine.h"/>
     </GROUP>
     <GROUP id="{FB35709A-4F3C-2E8B-FCF4-CC403CD4858B}" name="Resources">
       <FILE id="ExfaXP" name="smallPurpleKnob.png" compile="0" resource="1"
@@ -86,4 +89,3 @@
     <OSX/>
   </LIVE_SETTINGS>
 </JUCERPROJECT>
-
