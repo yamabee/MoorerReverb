@@ -11,6 +11,28 @@
       <FILE id="bR6x85" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="Zs0EjH" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="yy8D2M" name="LargeKnob.cpp" compile="1" resource="0" file="Source/LargeKnob.cpp"/>
+      <FILE id="W1NGTu" name="LargeKnob.h" compile="0" resource="0" file="Source/LargeKnob.h"/>
+      <FILE id="dF1dEx" name="SmallKnob.cpp" compile="1" resource="0" file="Source/SmallKnob.cpp"/>
+      <FILE id="bT0nqa" name="SmallKnob.h" compile="0" resource="0" file="Source/SmallKnob.h"/>
+    </GROUP>
+    <GROUP id="{FB35709A-4F3C-2E8B-FCF4-CC403CD4858B}" name="Resources">
+      <FILE id="ExfaXP" name="smallPurpleKnob.png" compile="0" resource="1"
+            file="Resources/smallPurpleKnob.png"/>
+      <FILE id="yRp4Sd" name="MoorerBackground.png" compile="0" resource="1"
+            file="Resources/MoorerBackground.png"/>
+      <FILE id="H8Huor" name="pinkDialKnob.png" compile="0" resource="1"
+            file="Resources/pinkDialKnob.png"/>
+      <FILE id="Q8Ume6" name="smallPinkGlowKnob.png" compile="0" resource="1"
+            file="Resources/smallPinkGlowKnob.png"/>
+      <FILE id="wMSl4W" name="VSTKnobPurple121.png" compile="0" resource="1"
+            file="Resources/VSTKnobPurple121.png"/>
+      <FILE id="gpFCSz" name="MetallicBG.png" compile="0" resource="1" file="Resources/MetallicBG.png"/>
+      <FILE id="ha7K6N" name="PultecKnobs.png" compile="0" resource="1" file="Resources/PultecKnobs.png"/>
+      <FILE id="lZ2hdv" name="VintageKnob.png" compile="0" resource="1" file="Resources/VintageKnob.png"/>
+      <FILE id="YOcN2L" name="VSTKnob64.png" compile="0" resource="1" file="Resources/VSTKnob64.png"/>
+      <FILE id="Uswxr7" name="MetallicBGwithGuide.png" compile="0" resource="1"
+            file="../../../../GUI Files/MetallicBGwithGuide.png"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>

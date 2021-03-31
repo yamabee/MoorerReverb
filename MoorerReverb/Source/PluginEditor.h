@@ -10,12 +10,14 @@
 
 #include <JuceHeader.h>
 #include "PluginProcessor.h"
+#include "SmallKnob.h"
+#include "LargeKnob.h"
 
 //==============================================================================
 /**
 */
 class MoorerReverbAudioProcessorEditor  : public juce::AudioProcessorEditor,
-                                            public juce::Slider::Listener
+                                          public juce::Slider::Listener
 {
 public:
     MoorerReverbAudioProcessorEditor (MoorerReverbAudioProcessor&);
@@ -28,17 +30,22 @@ public:
     void sliderValueChanged(Slider* slider) override;
 
 private:
+    ImageComponent backgroundImageComponent;
+    
     Slider diffusionKnob;
     Label diffusionLabel;
-    
+
     Slider reverbTimeKnob;
     Label reverbTimeLabel;
     
     Slider modulationKnob;
     Label modulationTimeKnob;
-    
+
     Slider mixKnob;
     Label mixLabel;
+    
+    SmallKnob smallKnob;
+    LargeKnob largeKnob;
     
     MoorerReverbAudioProcessor& audioProcessor;
 
