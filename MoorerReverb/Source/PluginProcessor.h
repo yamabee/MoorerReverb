@@ -9,6 +9,8 @@
 #pragma once
 
 #include <JuceHeader.h>
+#include "MoorerReverb.h"
+
 
 //==============================================================================
 /**
@@ -52,8 +54,19 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
+    
+    int getSampleRate(int sampleRate); 
+    
+    int Fs;
+    float timeMS; //time %
+    float mixPercent = 50.f; //mix %
+    float diffusion  = 50.f; //
+    float modulation = 5.f    //0-20
+ 
 
 private:
+    MoorerReverb Moorer;
+    
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MoorerReverbAudioProcessor)
 };
