@@ -17,22 +17,31 @@
 class APF{
     
 public:
+    //No call constructor
     APF();
-    
-    APF(float delay, float speed, float fb);
     
     float processSample(float x, int c);
     
-    void setDelaySamples(float delay);
-    void setSpeed(float speed);
+    //call to update delay for APF in Moorer Reverb
+    void setDelaySamples(float newDelay);
     
+    //call to update speed for APF in Moorer Reverb
+    void setSpeed(float newSpeed);
+    
+    void setDepth(float newDepth);
+    
+    void setFs(int newFs);
+    
+    void setGain(float g);
     
 private:
-    FractionalDelay frac;
     
     int Fs = 48000;
-    int sampleStart = 0;
-    float speed = 0.9;
-    float fb = 0.0f;
+    float delay = 5.0f;
+    float speed = 0.9f;
+    float depth = 0.8f;
+    float g = 0.0f;
+    
+    FractionalDelay frac;
     
 };
