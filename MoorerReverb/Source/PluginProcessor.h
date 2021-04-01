@@ -55,6 +55,7 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
     
+<<<<<<< HEAD
     int getSampleRate(int sampleRate); 
     
     int Fs;
@@ -63,6 +64,12 @@ public:
     float diffusion  = 50.f; //
     float modulation = 5.f    //0-20
  
+=======
+    float timePercent = 50.f; // sets gain of LPCF
+    float mixPercent = 50.f; //
+    float diffusionPercent = 50.f; // sets gain of APF
+    float modulation = 0; // sets depth -> 0-20
+>>>>>>> develop
 
 private:
     MoorerReverb Moorer;
