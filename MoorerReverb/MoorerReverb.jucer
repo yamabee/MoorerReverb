@@ -4,6 +4,8 @@
               addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1">
   <MAINGROUP id="dMbixO" name="MoorerReverb">
     <GROUP id="{316AADC9-65BB-D191-152F-05A443A3F470}" name="Source">
+      <FILE id="hFwyJO" name="Moorer(2).cpp" compile="1" resource="0" file="Source/Moorer(2).cpp"/>
+      <FILE id="JLjaxz" name="Moorer(2).h" compile="0" resource="0" file="Source/Moorer(2).h"/>
       <FILE id="R0e352" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
       <FILE id="rgL5gE" name="PluginProcessor.h" compile="0" resource="0"
