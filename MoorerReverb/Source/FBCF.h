@@ -19,6 +19,7 @@ class FBCF  : public juce::Component
 {
 public:
     FBCF();
+    FBCF(float newFs, float newDelaySamples, float newSpeed, float newDepth, float newGain);
     
     ~FBCF() override;
     
@@ -27,6 +28,9 @@ public:
     void setDelaySamples(float newDelaySamples);
     void setSpeed(float newSpeed);
     void setDepth(float newDepth);
+    
+    float getDelaySamples();
+    float getGain();
 
     float processSample(float x, int channel);
 

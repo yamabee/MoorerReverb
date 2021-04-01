@@ -19,6 +19,7 @@ class APF{
 public:
     //No call constructor
     APF();
+    APF(float newFs, float newDelaySamples, float newSpeed, float newDepth, float newGain);
     
     float processSample(float x, int chan);
     
@@ -30,7 +31,10 @@ public:
     void setDepth(float newDepth);
     void setGain(float newGain);
     
-    void setFs(int newFs);
+    float getDelaySamples();
+    float getGain();
+    
+    void setFs(float newFs);
     
 private:
     

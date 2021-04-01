@@ -14,6 +14,15 @@
 //==============================================================================
 FBCF::FBCF(){}
 
+FBCF::FBCF(float newFs, float newDelaySamples, float newSpeed, float newDepth, float newGain) {
+    setSampleRate(newFs);
+    setDelaySamples(newDelaySamples);
+    setSpeed(newSpeed);
+    setDepth(newDepth);
+    setGain(newGain);
+    
+}
+
 FBCF::~FBCF()
 {
 }
@@ -42,6 +51,14 @@ void FBCF::setDepth(float newDepth){
     depth = newDepth;
     frac.setDepth(depth);
     
+}
+
+float FBCF::getDelaySamples() {
+    return delaySamples;
+}
+
+float FBCF::getGain() {
+    return gain;
 }
 
 

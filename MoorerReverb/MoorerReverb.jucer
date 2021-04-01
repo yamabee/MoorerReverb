@@ -30,6 +30,8 @@
       <FILE id="YvA1W7" name="LargeKnob.h" compile="0" resource="0" file="Source/LargeKnob.h"/>
       <FILE id="j0F8NH" name="SmallKnob.cpp" compile="1" resource="0" file="Source/SmallKnob.cpp"/>
       <FILE id="Iy4t2A" name="SmallKnob.h" compile="0" resource="0" file="Source/SmallKnob.h"/>
+      <FILE id="A8nPeS" name="Moorer.cpp" compile="1" resource="0" file="Source/Moorer.cpp"/>
+      <FILE id="VNdW8H" name="Moorer.h" compile="0" resource="0" file="Source/Moorer.h"/>
       <GROUP id="{4ABD2FAA-58F6-588A-F959-563F1E6F93FD}" name="Resources">
         <FILE id="xC8rdQ" name="KnobSmallBlack.h" compile="0" resource="0"
               file="Resources/KnobSmallBlack.h"/>
