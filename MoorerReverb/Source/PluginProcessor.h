@@ -52,11 +52,6 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
-    
-    float timePercent = 50.f; // sets gain of LPCF
-    float mixPercent = 50.f; //
-    float diffusionPercent = 50.f; // sets gain of APF
-    float modulation = 0; // sets depth -> 0-20
 
 private:
     //==============================================================================

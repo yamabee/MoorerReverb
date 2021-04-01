@@ -1,50 +1,16 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="brj4Tb" name="MoorerReverb" projectType="audioplug" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1">
-  <MAINGROUP id="dMbixO" name="MoorerReverb">
-    <GROUP id="{316AADC9-65BB-D191-152F-05A443A3F470}" name="Source">
-      <FILE id="R0e352" name="PluginProcessor.cpp" compile="1" resource="0"
+<JUCERPROJECT id="oacJWv" name="MoorerReverb" projectType="audioplug" useAppConfig="0"
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+  <MAINGROUP id="NeWyW5" name="MoorerReverb">
+    <GROUP id="{472624B5-F86B-FCE7-3B81-8E29A863ADD3}" name="Source">
+      <FILE id="aNNcoc" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
-      <FILE id="rgL5gE" name="PluginProcessor.h" compile="0" resource="0"
+      <FILE id="c2tITO" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="bR6x85" name="PluginEditor.cpp" compile="1" resource="0"
+      <FILE id="S29Eeq" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
-      <FILE id="Zs0EjH" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
-      <FILE id="yy8D2M" name="LargeKnob.cpp" compile="1" resource="0" file="Source/LargeKnob.cpp"/>
-      <FILE id="W1NGTu" name="LargeKnob.h" compile="0" resource="0" file="Source/LargeKnob.h"/>
-      <FILE id="dF1dEx" name="SmallKnob.cpp" compile="1" resource="0" file="Source/SmallKnob.cpp"/>
-      <FILE id="bT0nqa" name="SmallKnob.h" compile="0" resource="0" file="Source/SmallKnob.h"/>
-      <FILE id="yy7pV2" name="APF.cpp" compile="1" resource="0" file="Source/APF.cpp"/>
-      <FILE id="yAXCwI" name="APF.h" compile="0" resource="0" file="Source/APF.h"/>
-      <FILE id="RENQ6T" name="FractionalDelay.cpp" compile="1" resource="0"
-            file="Source/FractionalDelay.cpp"/>
-      <FILE id="OPorhx" name="FractionalDelay.hpp" compile="0" resource="0"
-      <FILE id="DBavKY" name="FBCF.cpp" compile="1" resource="0" file="Source/FBCF.cpp"/>
-      <FILE id="Q6TAQZ" name="FBCF.h" compile="0" resource="0" file="Source/FBCF.h"/>
-            file="Source/FractionalDelay.hpp"/>
-      <FILE id="yhkVBB" name="DelayTapLine.cpp" compile="1" resource="0"
-            file="Source/DelayTapLine.cpp"/>
-      <FILE id="ip8C3G" name="DelayTapLine.h" compile="0" resource="0" file="Source/DelayTapLine.h"/>
-    </GROUP>
-    <GROUP id="{FB35709A-4F3C-2E8B-FCF4-CC403CD4858B}" name="Resources">
-      <FILE id="ExfaXP" name="smallPurpleKnob.png" compile="0" resource="1"
-            file="Resources/smallPurpleKnob.png"/>
-      <FILE id="yRp4Sd" name="MoorerBackground.png" compile="0" resource="1"
-            file="Resources/MoorerBackground.png"/>
-      <FILE id="H8Huor" name="pinkDialKnob.png" compile="0" resource="1"
-            file="Resources/pinkDialKnob.png"/>
-      <FILE id="Q8Ume6" name="smallPinkGlowKnob.png" compile="0" resource="1"
-            file="Resources/smallPinkGlowKnob.png"/>
-      <FILE id="wMSl4W" name="VSTKnobPurple121.png" compile="0" resource="1"
-            file="Resources/VSTKnobPurple121.png"/>
-      <FILE id="gpFCSz" name="MetallicBG.png" compile="0" resource="1" file="Resources/MetallicBG.png"/>
-      <FILE id="ha7K6N" name="PultecKnobs.png" compile="0" resource="1" file="Resources/PultecKnobs.png"/>
-      <FILE id="lZ2hdv" name="VintageKnob.png" compile="0" resource="1" file="Resources/VintageKnob.png"/>
-      <FILE id="YOcN2L" name="VSTKnob64.png" compile="0" resource="1" file="Resources/VSTKnob64.png"/>
-      <FILE id="Uswxr7" name="MetallicBGwithGuide.png" compile="0" resource="1"
-            file="../../../../GUI Files/MetallicBGwithGuide.png"/>
+      <FILE id="DYwNcc" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
@@ -85,7 +51,4 @@
     <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
     <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
   </MODULES>
-  <LIVE_SETTINGS>
-    <OSX/>
-  </LIVE_SETTINGS>
 </JUCERPROJECT>
