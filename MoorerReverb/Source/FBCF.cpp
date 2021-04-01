@@ -23,31 +23,32 @@ void FBCF::setGain(float newGain){
      
 }
 
-void FBCF::setFs(float newFs){
-    Fs=newFs;
+void FBCF::setSampleRate(float newFs){
+    Fs = newFs;
     frac.setFs(Fs);
 }
 
-void FBCF::setDelaySamples(float newDelay){
-    delay=newDelay;
-    frac.setDelaySamples(delay);
+void FBCF::setDelaySamples(float newDelaySamples){
+    delaySamples = newDelaySamples;
+    frac.setDelaySamples(delaySamples);
 }
 
 void FBCF::setSpeed(float newSpeed){
-    speed=newSpeed;
+    speed = newSpeed;
     frac.setSpeed(speed);
 }
 
 void FBCF::setDepth(float newDepth){
-    depth=newDepth;
+    depth = newDepth;
     frac.setDepth(depth);
+    
 }
 
 
 float FBCF::processSample(float x, int channel){
-    float w=frac.processSample(x,channel);
-    float fb= x + -gain * w;
-    float y=fb;
+    float w = frac.processSample(x, channel);
+    float fb = x + -gain * w;
+    float y = fb;
     
     return y;
     

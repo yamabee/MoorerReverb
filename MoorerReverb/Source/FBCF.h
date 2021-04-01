@@ -21,25 +21,24 @@ public:
     FBCF();
     
     ~FBCF() override;
-
-    float processSample(float x, int channel);
     
     void setGain(float newGain);
-    void setFs(float newFs);
-    void setDelaySamples(float newDelay);
+    void setSampleRate(float newFs);
+    void setDelaySamples(float newDelaySamples);
     void setSpeed(float newSpeed);
     void setDepth(float newDepth);
 
-
+    float processSample(float x, int channel);
 
 private:
     //create instance of fractional delay in private
     FractionalDelay frac;
     
-    float gain =-0.7f;
-    int Fs =  48000.f;
-    float delay = 0.f;
-    float speed =0.f;
+    float Fs =  48000.f;
+    
+    float gain = -0.7f;
+    float delaySamples = 0.f;
+    float speed = 0.f;
     float depth = 5.f;
     
     float fb = 0.f;
