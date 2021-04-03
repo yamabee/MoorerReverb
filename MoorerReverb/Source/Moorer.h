@@ -10,7 +10,7 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "PluginProcessor.h"
+//#include "PluginProcessor.h"
 #include "FBCF.h"
 #include "APF.h"
 #include "EarlyReflections.h"
@@ -27,23 +27,33 @@ public:
     const float apfGain[2] = {.707,.707};
     const float apfDelay[2] = {.0050*48000, .0017*48000};
     
+    
     //getters
-    float getCombDelay(const int elem);
-    float getAllpassDelay(const int elem);
-    float getAllpassGain(const int elem);
+//    float getCombDelay(const int elem);
+//    float getAllpassDelay(const int elem);
+//    float getAllpassGain(const int elem);
     
     //setters
+    void setCombDelay(const int elem, const float combDelay);
+    void setAllpassDelay(const int elem, const float apfDelay);
+    
     void setSampleRate(float newFs);
     void setCombGain(const float percent);
-    void setAllpassGain(const int elem, const float g);
-    void setAllpassDelay(const int elem, const int Fs, const float d);
-    void setModulation();
+    void setAllpassGain(float newGain);
+    
+//    void setAllpassDelay(const int elem, const int Fs, const float d);
+    void setModulation(float newModulation);
+    
+//    void setAllpassGain(const int elem, const float g);
     
     //main methods
-    float processSample(const float in, const int channel);
+    float processSample(const float x, const int channel);
 
 private:
     float Fs = 48000;
+    float apGainPercent = 1;
+    float cfGainPercent = 1;
+    float modulation = 1;
     
     FBCF *combs[4];
     APF *allpass[2];

@@ -12,6 +12,12 @@
 
 EarlyReflections::EarlyReflections() {}
 
+void EarlyReflections::setSampleRate(float newFs) {
+    Fs = newFs;
+    setDelayTimeSamples();
+    
+}
+
 void EarlyReflections::setDelayTimeSamples(){
     
     delayTimeSamples[0] = 0.f;
@@ -81,18 +87,19 @@ float EarlyReflections::processSample(float x, int chan) {
         y = y + gain[tap] * buf[rIndex[tap][chan]][chan];
         
         rIndex[tap][chan]++;
-        if (rIndex[tap][chan] > bufferLength) {
-            rIndex[tap][chan] = rIndex[tap][chan] - bufferLength;
+        if (rIndex[tap][chan] > bufferLength-1) {
+            rIndex[tap][chan] = rIndex[tap][chan] - bufferLength-1;
             
         }
     }
     
     wIndex[chan]++;
-    if (wIndex[chan] > bufferLength) {
-        wIndex[chan] = wIndex[chan] - bufferLength;
+    if (wIndex[chan] > bufferLength-1) {
+        wIndex[chan] = wIndex[chan] - bufferLength-1;
     }
     
     createIndex();
     
+    return y;
 }
 

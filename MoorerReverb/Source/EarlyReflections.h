@@ -32,7 +32,7 @@ private:
     float bufferLength = 48000.f;
     
     int wIndex[2] = {48000};
-    int rIndex[19][2] = {48000.f};
+    int rIndex[19][2] = {48000};
     
     float delayTimeSamples[19];
     float gain[19];

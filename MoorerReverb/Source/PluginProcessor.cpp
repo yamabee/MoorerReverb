@@ -147,8 +147,6 @@ void MoorerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     moorer.setCombGain(timePercent);
     moorer.setAllpassGain(diffusion);
     moorer.setModulation(modulation);
-    
-    moorer.setWetDryMix(mixPercent);
 
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
@@ -162,6 +160,7 @@ void MoorerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
             float x = buffer.getReadPointer(channel)[n];
             float y = moorer.processSample(x, channel);
             buffer.getWritePointer(channel)[n] = (y * mixPercent) + (x * (1-mixPercent));
+            
         }
     }
 }
