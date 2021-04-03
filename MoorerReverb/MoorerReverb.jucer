@@ -17,9 +17,6 @@
       <FILE id="DYwNcc" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
       <FILE id="Uo3hod" name="APF.cpp" compile="1" resource="0" file="Source/APF.cpp"/>
       <FILE id="zzPxSe" name="APF.h" compile="0" resource="0" file="Source/APF.h"/>
-      <FILE id="FXMusT" name="DelayTapLine.cpp" compile="1" resource="0"
-            file="Source/DelayTapLine.cpp"/>
-      <FILE id="FBTVLM" name="DelayTapLine.h" compile="0" resource="0" file="Source/DelayTapLine.h"/>
       <FILE id="TIdXq0" name="FBCF.cpp" compile="1" resource="0" file="Source/FBCF.cpp"/>
       <FILE id="PTMx77" name="FBCF.h" compile="0" resource="0" file="Source/FBCF.h"/>
       <FILE id="cm7KAo" name="FractionalDelay.cpp" compile="1" resource="0"

@@ -10,7 +10,50 @@
 
 #include "EarlyReflections.h"
 
-EarlyReflections::EarlyReflections() {}
+EarlyReflections::EarlyReflections() {
+    frac[0] = new FractionalDelay();
+    frac[1] = new FractionalDelay();
+    frac[2] = new FractionalDelay();
+    frac[3] = new FractionalDelay();
+    frac[4] = new FractionalDelay();
+    frac[5] = new FractionalDelay();
+    frac[6] = new FractionalDelay();
+    frac[7] = new FractionalDelay();
+    frac[8] = new FractionalDelay();
+    frac[9] = new FractionalDelay();
+    frac[10] = new FractionalDelay();
+    frac[11] = new FractionalDelay();
+    frac[12] = new FractionalDelay();
+    frac[13] = new FractionalDelay();
+    frac[14] = new FractionalDelay();
+    frac[15] = new FractionalDelay();
+    frac[16] = new FractionalDelay();
+    frac[17] = new FractionalDelay();
+    frac[18] = new FractionalDelay();
+    
+}
+
+EarlyReflections::~EarlyReflections() {
+    delete frac[0];
+    delete frac[1];
+    delete frac[2];
+    delete frac[3];
+    delete frac[4];
+    delete frac[5];
+    delete frac[6];
+    delete frac[7];
+    delete frac[8];
+    delete frac[9];
+    delete frac[10];
+    delete frac[11];
+    delete frac[12];
+    delete frac[13];
+    delete frac[14];
+    delete frac[15];
+    delete frac[16];
+    delete frac[17];
+    delete frac[18];
+}
 
 void EarlyReflections::setSampleRate(float newFs) {
     Fs = newFs;
@@ -40,6 +83,11 @@ void EarlyReflections::setDelayTimeSamples(){
     delayTimeSamples[17] = round(Fs*0.05452f);
     delayTimeSamples[18] = round(Fs*0.06958f);
     
+    for (int i = 0; i < 19; i++) {
+        frac[i]->setFs(Fs);
+        frac[i]->setDepth(0);
+        frac[i]->setDelaySamples(delayTimeSamples[i]);
+    }
 }
 
 void EarlyReflections::setGain(){
@@ -65,40 +113,16 @@ void EarlyReflections::setGain(){
     
 }
 
-void EarlyReflections::createIndex(){
-    for (int chan = 0; chan < 2; ++chan) {
-        for (int i = 0; i < 19; ++i) {
-            rIndex[i][chan] = wIndex[chan] - delayTimeSamples[i];
-            
-            if(rIndex[i][chan] > bufferLength) {
-                rIndex[i][chan] = rIndex[i][chan] - bufferLength;
-                
-            }
-        }
-    }
-}
+
 
 float EarlyReflections::processSample(float x, int chan) {
+
     float y = 0.f;
-    
-    buf[wIndex[chan]][chan] = x;
-    
-    for (int tap = 0; tap < 19; ++tap) {
-        y = y + gain[tap] * buf[rIndex[tap][chan]][chan];
+
+    for (int tap = 0; tap < 19; tap++) {
+        y = y + gain[tap] * frac[tap]->processSample(x, chan);
         
-        rIndex[tap][chan]++;
-        if (rIndex[tap][chan] > bufferLength-1) {
-            rIndex[tap][chan] = rIndex[tap][chan] - bufferLength-1;
-            
-        }
     }
-    
-    wIndex[chan]++;
-    if (wIndex[chan] > bufferLength-1) {
-        wIndex[chan] = wIndex[chan] - bufferLength-1;
-    }
-    
-    createIndex();
     
     return y;
 }

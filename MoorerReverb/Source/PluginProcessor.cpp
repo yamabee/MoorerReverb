@@ -144,6 +144,7 @@ void MoorerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
     
+    
     moorer.setCombGain(timePercent);
     moorer.setAllpassGain(diffusion);
     moorer.setModulation(modulation);

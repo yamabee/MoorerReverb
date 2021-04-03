@@ -90,7 +90,7 @@ void Moorer::setAllpassGain(float newGain) {
     apGainPercent = newGain;
     for (int i = 0; i < 2; ++i) {
         float gain = 0.0f;
-        gain = allpass[i] ->getGain()*apGainPercent;
+        gain = allpass[i] -> getGain()*apGainPercent;
         allpass[i]->setGain(gain);
     }
 }
@@ -106,7 +106,7 @@ void Moorer::setModulation(float newModulation) {
     for (int i = 0; i < 2; ++i) {
         allpass[i]->setDepth(modulation);
         allpass[i]->setSpeed(rateValue);
-        rateValue =rateValue + 0.12;
+        rateValue = rateValue + 0.12;
     }
 }
 
@@ -130,18 +130,17 @@ float Moorer::processSample(const float x, const int channel){
     
     //early reflect
     ers = er[0]->processSample(x,channel);
-           
     tapOut = ers;
     
     //combs take output from early reflect generator
     for(int i = 0; i < 4; i++){
-        combOut += combs[i]->processSample(tapOut * 0.25f,channel);
+        combOut += combs[i]->processSample(tapOut * 0.25f, channel);
     }
-    
+
     //output of combs fed to all pass
     apf1Out = allpass[0]->processSample(combOut,channel);
     apf2Out = allpass[1]->processSample(apf1Out,channel);
     
-    return apf2Out;
+    return tapOut;
     
 }

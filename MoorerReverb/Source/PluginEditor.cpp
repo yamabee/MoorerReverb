@@ -26,7 +26,7 @@ MoorerReverbAudioProcessorEditor::MoorerReverbAudioProcessorEditor (MoorerReverb
     
     mixKnob.addListener(this);
     mixKnob.setRange(0, 1, 0.01);
-    mixKnob.setValue(50);
+    mixKnob.setValue(audioProcessor.mixPercent);
     mixKnob.setSliderStyle(Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     mixKnob.setTextBoxStyle(Slider::NoTextBox, false, 75, 20);
     addAndMakeVisible(mixKnob);
@@ -35,7 +35,7 @@ MoorerReverbAudioProcessorEditor::MoorerReverbAudioProcessorEditor (MoorerReverb
     
     reverbTimeKnob.addListener(this);
     reverbTimeKnob.setRange(0.01, 1, 0.01);
-    reverbTimeKnob.setValue(0.5);
+    reverbTimeKnob.setValue(audioProcessor.timePercent);
     reverbTimeKnob.setSliderStyle(Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     reverbTimeKnob.setTextBoxStyle(Slider::TextBoxBelow, false, 60, 20);
     addAndMakeVisible(reverbTimeKnob);
@@ -44,7 +44,7 @@ MoorerReverbAudioProcessorEditor::MoorerReverbAudioProcessorEditor (MoorerReverb
     
     diffusionKnob.addListener(this);
     diffusionKnob.setRange(0.01, 1, 0.01);
-    diffusionKnob.setValue(0.5);
+    diffusionKnob.setValue(audioProcessor.diffusion);
     diffusionKnob.setSliderStyle(Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     diffusionKnob.setTextBoxStyle(Slider::TextBoxBelow, false,60, 20);
     addAndMakeVisible(diffusionKnob);
@@ -53,7 +53,7 @@ MoorerReverbAudioProcessorEditor::MoorerReverbAudioProcessorEditor (MoorerReverb
     
     modulationKnob.addListener(this);
     modulationKnob.setRange(0, 20, 1);
-    modulationKnob.setValue(5);
+    modulationKnob.setValue(audioProcessor.modulation);
     modulationKnob.setSliderStyle(Slider::SliderStyle::RotaryHorizontalVerticalDrag);
     modulationKnob.setTextBoxStyle(Slider::TextBoxBelow, false, 60, 20);
     addAndMakeVisible(modulationKnob);

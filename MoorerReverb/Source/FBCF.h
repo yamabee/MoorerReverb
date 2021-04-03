@@ -44,6 +44,8 @@ private:
     float delaySamples = 0.f;
     float speed = 0.f;
     float depth = 5.f;
+    float memory = 0.f;
+    float fbLPF = 0.f;
     
     float fb = 0.f;
     
