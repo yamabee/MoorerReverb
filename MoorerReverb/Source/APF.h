@@ -31,10 +31,10 @@ public:
     void setDepth(float newDepth);
     void setGain(float newGain);
     
-    float getDelaySamples();
+//    float getDelaySamples();
     float getGain();
     
-    void setFs(float newFs);
+    void setSampleRate(float newFs);
     
 private:
     
