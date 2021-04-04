@@ -93,8 +93,8 @@ void MoorerReverbAudioProcessor::changeProgramName (int index, const juce::Strin
 //==============================================================================
 void MoorerReverbAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBlock)
 {
-    // Use this method as the place to do any pre-playback
-    // initialisation that you need..
+    moorer.setSampleRate(sampleRate);
+    
 }
 
 void MoorerReverbAudioProcessor::releaseResources()
@@ -143,6 +143,11 @@ void MoorerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     // this code if your algorithm always overwrites all the output channels.
     for (auto i = totalNumInputChannels; i < totalNumOutputChannels; ++i)
         buffer.clear (i, 0, buffer.getNumSamples());
+    
+    
+    moorer.setCombGain(timePercent);
+    moorer.setAllpassGain(diffusion);
+    moorer.setModulation(modulation);
 
     // This is the place where you'd normally do the guts of your plugin's
     // audio processing...
@@ -152,9 +157,12 @@ void MoorerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
     // interleaved by keeping the same state.
     for (int channel = 0; channel < totalNumInputChannels; ++channel)
     {
-        auto* channelData = buffer.getWritePointer (channel);
-
-        // ..do something to the data...
+        for (int n = 0; n < buffer.getNumSamples(); ++n) {
+            float x = buffer.getReadPointer(channel)[n];
+            float y = moorer.processSample(x, channel);
+            buffer.getWritePointer(channel)[n] = (y * mixPercent) + (x * (1-mixPercent));
+            
+        }
     }
 }
 

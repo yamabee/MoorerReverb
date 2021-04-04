@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<JUCERPROJECT id="brj4Tb" name="MoorerReverb" projectType="audioplug" useAppConfig="0"
+<JUCERPROJECT id="oacJWv" name="MoorerReverb" projectType="audioplug" useAppConfig="0"
               addUsingNamespaceToJuceHeader="1" displaySplashScreen="1" jucerFormatVersion="1">
-  <MAINGROUP id="dMbixO" name="MoorerReverb">
-    <GROUP id="{316AADC9-65BB-D191-152F-05A443A3F470}" name="Source">
-      <FILE id="R0e352" name="PluginProcessor.cpp" compile="1" resource="0"
+  <MAINGROUP id="NeWyW5" name="MoorerReverb">
+    <GROUP id="{472624B5-F86B-FCE7-3B81-8E29A863ADD3}" name="Source">
+      <FILE id="tZ0aw6" name="EarlyReflections.cpp" compile="1" resource="0"
+            file="Source/EarlyReflections.cpp"/>
+      <FILE id="tsatL0" name="EarlyReflections.h" compile="0" resource="0"
+            file="Source/EarlyReflections.h"/>
+      <FILE id="aNNcoc" name="PluginProcessor.cpp" compile="1" resource="0"
             file="Source/PluginProcessor.cpp"/>
-      <FILE id="rgL5gE" name="PluginProcessor.h" compile="0" resource="0"
+      <FILE id="c2tITO" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="bR6x85" name="PluginEditor.cpp" compile="1" resource="0"
+      <FILE id="S29Eeq" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
-      <FILE id="Zs0EjH" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="DYwNcc" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="Uo3hod" name="APF.cpp" compile="1" resource="0" file="Source/APF.cpp"/>
+      <FILE id="zzPxSe" name="APF.h" compile="0" resource="0" file="Source/APF.h"/>
+      <FILE id="TIdXq0" name="FBCF.cpp" compile="1" resource="0" file="Source/FBCF.cpp"/>
+      <FILE id="PTMx77" name="FBCF.h" compile="0" resource="0" file="Source/FBCF.h"/>
+      <FILE id="cm7KAo" name="FractionalDelay.cpp" compile="1" resource="0"
+            file="Source/FractionalDelay.cpp"/>
+      <FILE id="SRerGV" name="FractionalDelay.hpp" compile="0" resource="0"
+            file="Source/FractionalDelay.hpp"/>
+      <FILE id="Y1YESM" name="LargeKnob.cpp" compile="1" resource="0" file="Source/LargeKnob.cpp"/>
+      <FILE id="YvA1W7" name="LargeKnob.h" compile="0" resource="0" file="Source/LargeKnob.h"/>
+      <FILE id="j0F8NH" name="SmallKnob.cpp" compile="1" resource="0" file="Source/SmallKnob.cpp"/>
+      <FILE id="Iy4t2A" name="SmallKnob.h" compile="0" resource="0" file="Source/SmallKnob.h"/>
+      <FILE id="A8nPeS" name="Moorer.cpp" compile="1" resource="0" file="Source/Moorer.cpp"/>
+      <FILE id="VNdW8H" name="Moorer.h" compile="0" resource="0" file="Source/Moorer.h"/>
+      <GROUP id="{4ABD2FAA-58F6-588A-F959-563F1E6F93FD}" name="Resources">
+        <FILE id="xC8rdQ" name="KnobSmallBlack.h" compile="0" resource="0"
+              file="Resources/KnobSmallBlack.h"/>
+        <FILE id="KMD5Ef" name="MetallicBG.png" compile="0" resource="1" file="Resources/MetallicBG.png"/>
+        <FILE id="wcaRtL" name="MetallicBGwithGuide.png" compile="0" resource="1"
+              file="Resources/MetallicBGwithGuide.png"/>
+        <FILE id="QCEoLd" name="MoorerBackground.png" compile="0" resource="1"
+              file="Resources/MoorerBackground.png"/>
+        <FILE id="PzAmyD" name="pinkDialKnob.png" compile="0" resource="1"
+              file="Resources/pinkDialKnob.png"/>
+        <FILE id="tvmREo" name="PultecKnobs.png" compile="0" resource="1" file="Resources/PultecKnobs.png"/>
+        <FILE id="yOQVzm" name="smallPinkGlowKnob.png" compile="0" resource="1"
+              file="Resources/smallPinkGlowKnob.png"/>
+        <FILE id="IWfibi" name="smallPurpleKnob.png" compile="0" resource="1"
+              file="Resources/smallPurpleKnob.png"/>
+        <FILE id="vXTXqO" name="VintageKnob.png" compile="0" resource="1" file="Resources/VintageKnob.png"/>
+        <FILE id="iMadnw" name="VSTKnob64.png" compile="0" resource="1" file="Resources/VSTKnob64.png"/>
+        <FILE id="trOtMZ" name="VSTKnobPurple121.png" compile="0" resource="1"
+              file="Resources/VSTKnobPurple121.png"/>
+      </GROUP>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1" JUCE_VST3_CAN_REPLACE_VST2="0"/>
