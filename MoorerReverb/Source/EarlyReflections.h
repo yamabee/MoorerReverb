@@ -41,4 +41,6 @@ private:
     float delayTimeSamples[19];
     float gain[19];
     
+    float y[2] = {0.f,0.f};
+    
 };

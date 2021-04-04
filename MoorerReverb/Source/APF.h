@@ -44,7 +44,10 @@ private:
     float speed = 0.9f;
     float depth = 0.8f;
     float gain = 0.f;
-    float memory = 0.f;
+    
+    float memory[2] = {0.f};
+    float w[2] = {0.f};
+    float v[2] = {0.f};
     
     FractionalDelay frac;
     

@@ -18,12 +18,21 @@ Moorer::Moorer(){
     combs[1] = new FBCF();
     combs[2] = new FBCF();
     combs[3] = new FBCF();
-
+    for (int i = 0; i<4; i++) {
+        combs[i]->setDelaySamples(combDelay[i]*Fs);
+        combs[i]->setGain(cDGain[i]);
+    }
+    
     
     allpass[0] = new APF();
     allpass[1] = new APF();
+    for (int i = 0; i<2; i++) {
+        allpass[i]->setDelaySamples(apfDelay[i]*Fs);
+        allpass[i]->setGain(apfGain[i]);
+    }
     
     er[0] = new EarlyReflections();
+    er[0]->setGain();
 }
 
 Moorer::~Moorer(){
@@ -32,8 +41,10 @@ Moorer::~Moorer(){
     delete combs[2];
     delete combs[3];
     
-    delete combs[0];
-    delete combs[1];
+    delete allpass[0];
+    delete allpass[1];
+    
+    delete er[0];
 }
 
 //float Moorer::getCombDelay(const int elem) {
@@ -122,25 +133,25 @@ void Moorer::setModulation(float newModulation) {
 //}
 
 float Moorer::processSample(const float x, const int channel){
-    float combOut = 0.0f;
-    float apf1Out = 0.0f;
-    float apf2Out = 0.0f;
-    float ers = 0.0f;
-    float tapOut = 0.0f;
+    float combOut[2] = {0.0f, 0.f};
+    float apf1Out[2] = {0.0f,0.f};
+    float apf2Out[2] = {0.0f,0.f};
+    float ers[2] = {0.0f,0.f};
+    float tapOut[2] = {0.0f,0.f};
     
     //early reflect
-    ers = er[0]->processSample(x,channel);
-    tapOut = ers;
+    ers[channel] = er[0]->processSample(x,channel);
+    tapOut[channel] = ers[channel];
     
     //combs take output from early reflect generator
     for(int i = 0; i < 4; i++){
-        combOut += combs[i]->processSample(tapOut * 0.25f, channel);
+        combOut[channel] += combs[i]->processSample(x/*tapOut[channel]*/ * 0.25f, channel);
     }
 
     //output of combs fed to all pass
-    apf1Out = allpass[0]->processSample(combOut,channel);
-    apf2Out = allpass[1]->processSample(apf1Out,channel);
+    apf1Out[channel] = allpass[0]->processSample(combOut[channel],channel);
+    apf2Out[channel] = allpass[1]->processSample(apf1Out[channel],channel);
     
-    return tapOut;
+    return combOut[channel];
     
 }

@@ -54,10 +54,10 @@ float APF::getGain() {
 
 float APF::processSample(float x, int chan){
 
-    float w = frac.processSample(memory, chan);
-    float v = x + (-gain * w);
-    memory = v;
-    float y = (gain * v) + w;
+    w[chan] = frac.processSample(memory[chan], chan);
+    v[chan] = x + (-gain * w[chan]);
+    memory[chan] = v[chan];
+    float y = (gain * v[chan]) + w[chan];
     
     return y;
     

@@ -40,14 +40,15 @@ private:
     
     float Fs =  48000.f;
     
-    float gain = -0.7f;
+    float gain = -0.9f;
     float delaySamples = 0.f;
     float speed = 0.f;
     float depth = 5.f;
-    float memory = 0.f;
-    float fbLPF = 0.f;
+    float memory[2] = {0.f,0.f};
+    float w[2] = {0.f,0.f};
+    float y[2] = {0.f,0.f};
     
-    float fb = 0.f;
+//    float fb = 0.f;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (FBCF)
 };

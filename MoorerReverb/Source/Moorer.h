@@ -22,10 +22,10 @@ public:
     Moorer();
     ~Moorer();
     
-    const float combDelay[4]={.0437*48000,.0411*48000,.0371*48000,.0297*48000};
+    const float combDelay[4]={.0437,.0411,.0371,.0297};
     const float cDGain[4] = {-.9,.9, -.9,.9};
     const float apfGain[2] = {.707,.707};
-    const float apfDelay[2] = {.0050*48000, .0017*48000};
+    const float apfDelay[2] = {.0050, .0017};
     
     
     //getters

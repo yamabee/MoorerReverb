@@ -117,13 +117,13 @@ void EarlyReflections::setGain(){
 
 float EarlyReflections::processSample(float x, int chan) {
 
-    float y = 0.f;
-
+    y[chan] = 0.f;
+    
     for (int tap = 0; tap < 19; tap++) {
-        y = y + gain[tap] * frac[tap]->processSample(x, chan);
+        y[chan] += gain[tap] * frac[tap]->processSample(x, chan);
         
     }
     
-    return y;
+    return y[chan];
 }
 

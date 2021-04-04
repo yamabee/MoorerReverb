@@ -54,10 +54,10 @@ public:
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
     
-    float timePercent = 0.5f;
+    float timePercent = 1.f;
     float mixPercent = 0.5;
-    float diffusion = 0.5;
-    float modulation = 5.f; // 0->20
+    float diffusion = 1.f;
+    float modulation = 3.f; // 0->20
     
 private:
     float Fs = 48000.f;

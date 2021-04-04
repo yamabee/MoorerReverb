@@ -63,13 +63,14 @@ float FBCF::getGain() {
 
 
 float FBCF::processSample(float x, int channel){
-    memory = frac.processSample(x + gain * (0.5*memory + 0.5*fbLPF), channel);
-    float y = memory;
-    fbLPF = y;
+    
+    w[channel] = frac.processSample(memory[channel], channel);
+    y[channel] = x + gain * (0.5 * w[channel] + 0.5 * memory[channel]);
+    memory[channel] = w[channel];
     
 //    float fb = x + -gain * w;
 //    float y = fb;
     
-    return y;
+    return y[channel];
     
 }
