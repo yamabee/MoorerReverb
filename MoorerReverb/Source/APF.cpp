@@ -18,42 +18,44 @@ APF::APF(float newFs, float newDelaySamples, float newSpeed, float newDepth, flo
     setSampleRate(newFs);
     setDelaySamples(newDelaySamples);
     setGain(newGain);
+    
 }
 
 void APF::setSampleRate(float newFs){
     Fs = newFs;
     frac.setFs(Fs);
+    
 }
 
 void APF::setDelaySamples(float newDelaySamples){
     delaySamples = newDelaySamples;
     frac.setDelaySamples(delaySamples);
+    
 }
 
 void APF::setSpeed(float newSpeed){
     speed = newSpeed;
     frac.setSpeed(speed);
+    
 }
 
 void APF::setDepth(float newDepth){
     depth = newDepth;
     frac.setDepth(depth);
+    
 }
 
 void APF::setGain(float newGain){
     gain = newGain;
+    
 }
-
-//float APF::getDelaySamples(){
-//    return delaySamples;
-//}
 
 float APF::getGain() {
     return gain;
+    
 }
 
 float APF::processSample(float x, int chan){
-
     w[chan] = frac.processSample(memory[chan], chan);
     v[chan] = x + (-gain * w[chan]);
     memory[chan] = v[chan];

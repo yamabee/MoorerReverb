@@ -47,7 +47,7 @@ void FBCF::setSpeed(float newSpeed){
     frac.setSpeed(speed);
 }
 
-void FBCF::setDepth(float newDepth){
+void FBCF::setDepth(float newDepth) {
     depth = newDepth;
     frac.setDepth(depth);
     
@@ -61,12 +61,11 @@ float FBCF::getGain() {
     return gain;
 }
 
-
 float FBCF::processSample(float x, int channel){
     
-    w[channel] = frac.processSample(memory[channel], channel);
-    y[channel] = x + gain * (0.5 * w[channel] + 0.5 * memory[channel]);
-    memory[channel] = w[channel];
+    w[channel] = frac.processSample(x + gain * (0.5 * w[channel] + 0.5 * memory[channel]), channel);
+    y[channel] = w[channel];
+    memory[channel] = y[channel];
     
 //    float fb = x + -gain * w;
 //    float y = fb;

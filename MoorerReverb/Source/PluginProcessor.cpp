@@ -160,7 +160,7 @@ void MoorerReverbAudioProcessor::processBlock (juce::AudioBuffer<float>& buffer,
         for (int n = 0; n < buffer.getNumSamples(); ++n) {
             float x = buffer.getReadPointer(channel)[n];
             float y = moorer.processSample(x, channel);
-            buffer.getWritePointer(channel)[n] = y;/*(y * mixPercent) + (x * (1-mixPercent));*/
+            buffer.getWritePointer(channel)[n] = (y * mixPercent) + (x * (1-mixPercent));
             
         }
     }

@@ -104,4 +104,14 @@ void MoorerReverbAudioProcessorEditor::sliderValueChanged(Slider* slider) {
     if (slider == &reverbTimeKnob) {
         audioProcessor.timePercent = reverbTimeKnob.getValue();
     }
+    if (slider == &mixKnob) {
+        audioProcessor.mixPercent = mixKnob.getValue();
+    }
+    if (slider == &diffusionKnob) {
+        audioProcessor.diffusion = diffusionKnob.getValue();
+    }
+    if (slider == &modulationKnob) {
+        audioProcessor.modulation = modulationKnob.getValue();
+    }
 }
+

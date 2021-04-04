@@ -110,7 +110,7 @@ void Moorer::setModulation(float newModulation) {
     modulation = newModulation;
     float rateValue = 0.6f;
     for(int i = 0; i < 4; i++){
-        combs[i]->setDepth(modulation);
+        combs[i]-> setDepth(modulation);
         combs[i]-> setSpeed(rateValue);
         rateValue = rateValue + 0.12;
         }
@@ -145,13 +145,13 @@ float Moorer::processSample(const float x, const int channel){
     
     //combs take output from early reflect generator
     for(int i = 0; i < 4; i++){
-        combOut[channel] += combs[i]->processSample(x/*tapOut[channel]*/ * 0.25f, channel);
+        combOut[channel] += combs[i]->processSample(tapOut[channel] * 0.25f, channel);
     }
 
     //output of combs fed to all pass
     apf1Out[channel] = allpass[0]->processSample(combOut[channel],channel);
     apf2Out[channel] = allpass[1]->processSample(apf1Out[channel],channel);
     
-    return combOut[channel];
+    return apf2Out[channel];
     
 }
